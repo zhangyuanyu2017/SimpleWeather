@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/rel_search_frame_delete"
+        android:background="@color/Bar_Color"
+        >
+
+      <ImageView
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:src="@drawable/Drawable_Back"
+          android:id="@+id/imageview_add_return"/>
+
+      <LinearLayout
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:background="@android:drawable/editbox_background"
+          android:orientation="horizontal"
+          android:gravity="center_vertical"
+          android:layout_marginRight="15dp"
+          android:layout_marginLeft="5dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_search"/>
+
+        <EditText
+            android:id="@+id/edittext_add_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Search..."
+            android:background="@null"
+            android:singleLine="true"/>
+      </LinearLayout>
+
+    </LinearLayout>
+
+      <!--<ImageView
+        android:id="@+id/imageview_delete_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		    android:layout_alignParentRight="true"
+	  	  android:src="@drawable/Drawable_Cross"
+	  	  android:layout_centerInParent="true"
+		    android:paddingRight="20dp"
+		    android:visibility="gone"/>-->
+
+  <ListView
+         android:id="@+id/listview_add_city"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_below="@+id/top" >
+  </ListView>
+
+</LinearLayout>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+              android:id="@+id/lin_fragment_all"
+              android:background="#F8F8FF">
+
+  <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+      <!--weather-->
+      <LinearLayout
+          android:layout_width="fill_parent"
+          android:layout_height="420dp"
+          android:orientation="vertical"
+          android:background="@drawable/Drawable_Cool"
+          android:id="@+id/lin_fragment_background">
+        
+        <!--android:background="@drawable/Drawable_Cool"-->
+        <!--temperature,city,weather-->
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+          <!--temperature city weather-->
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="150dp"
+              android:orientation="vertical"
+              android:layout_marginLeft="5dp">
+
+            <TextView
+              android:id="@+id/textview_fragment_temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="60dp"
+                android:textColor="@android:color/white"
+                android:textStyle="normal"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="5dp">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/textview_fragment_city"
+                  android:textColor="@android:color/white"/>
+              <ImageView
+                  android:layout_width="0.5dp"
+                  android:layout_height="fill_parent"
+                  android:background="@android:color/white"
+                  android:layout_marginLeft="4dp"/>
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/textview_fragment_weather"
+                  android:layout_marginLeft="4dp"
+                  android:textColor="@android:color/white"/>
+            </LinearLayout>
+
+          </LinearLayout>
+
+          <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/Drawable_Overflow"
+                        android:id="@+id/imageview_main_overflow"
+                        android:layout_marginRight="10dp"
+                        android:layout_alignParentRight="true"
+                        />
+        </RelativeLayout>
+        <!--other details-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="200dp">
+          <!--wind-->
+          <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:orientation="vertical"
+              android:layout_marginLeft="5dp">
+
+            <TextView
+              android:id="@+id/textview_fragment_wind_direction"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="North"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@android:color/white"/>
+            <TextView
+              android:id="@+id/textview_fragment_wind_speed"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="degree 30"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_marginTop="3dp"
+                android:textColor="@android:color/white"/>
+          </LinearLayout>
+
+          <ImageView
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="0.01"
+              android:background="@android:color/white"/>
+          <!--humidity-->
+          <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Humidity"
+                android:gravity="center"
+                android:textColor="@android:color/white"/>
+            <TextView
+              android:id="@+id/textview_fragment_humidity"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="1atm"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_marginTop="3dp"
+                android:textColor="@android:color/white"/>
+
+          </LinearLayout>
+
+          <ImageView
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="0.01"
+              android:background="@android:color/white"/>
+
+          <!--visibility-->
+          <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Visibility"
+                android:gravity="center"
+                android:textColor="@android:color/white"/>
+            <TextView
+              android:id="@+id/textview_fragment_visibility"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="65%"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"/>
+
+          </LinearLayout>
+
+        </LinearLayout>
+        
+      </LinearLayout>
+
+      <!--forecast-->
+
+      <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:id="@+id/listview_fragment_forecast"/>
+
+
+      <!--forecast every 3 hours-->
+      <LinearLayout
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:layout_marginTop="15dp"
+          android:background="@android:color/white">
+
+        <TextView
+          android:layout_width="fill_parent"
+          android:layout_height="45dp"
+          android:text="Forecast in 48 hours"
+          android:textSize="22sp"/>
+        
+        <HorizontalScrollView
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content">
+
+
+          <SimpleWeather.View_Weather
+            android:id="@+id/view_weather_fragment"
+            android:layout_width="600dp"
+            android:layout_height="300dp"/>
+
+        </HorizontalScrollView>
+
+      </LinearLayout>
+
+      <!--<TextView
+android:id="@+id/textview_fragment_weather1"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"/>-->
+
+      <!--<ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+        android:id="@+id/textview_fragment_forecast1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+      </ScrollView>-->
+      <LinearLayout
+        android:layout_height="15dp"
+        android:layout_width="fill_parent"/>
+    </LinearLayout>
+    
+  </ScrollView>
+
+
+
+</LinearLayout>
